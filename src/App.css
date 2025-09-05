@@ -1,0 +1,237 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  background: #0a0a0a; /* same as navbar */
+  color: #00ff41; 
+  font-family: "Share Tech Mono", monospace;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 30px;
+  background: #0a0a0a !important;
+  border-bottom: 2px solid #00ff41;
+  color: lime !important;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ff41;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Wallet + Signature buttons unified */
+.wallet-adapter-button,
+.signature-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: #512da8; /* purple style */
+  color: #fff;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.wallet-adapter-button:hover,
+.signature-btn:hover {
+  background-color: #693fbb;
+}
+
+.wallet-adapter-button:active,
+.signature-btn:active {
+  transform: scale(0.97);
+}
+
+.wallet-adapter-button:disabled,
+.signature-btn:disabled {
+  background-color: #333;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Body Layout */
+.body-container {
+  display: flex;
+  height: calc(100% - 70px);
+  width: 100%;
+  background: #0a0a0a; /* same as navbar */
+}
+
+/* Contest Box (Left) */
+.contest-box {
+  width: 25%;
+  border-right: 2px solid #00ff41;
+  padding: 20px;
+  background: #0a0a0a; /* match navbar */
+}
+
+.contest-box h2 {
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.contest-box ul {
+  list-style: none;
+}
+
+.contest-box li {
+  margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.ongoing {
+  color: #ff0000;
+}
+
+.upcoming {
+  color: #00aaff;
+}
+
+/* Balance box below contests */
+.balance-box {
+  background: #0a0a0a; /* match navbar */
+  border: 2px solid #00ff41;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 6px #00ff41;
+}
+
+/* Participants Box (Right) */
+.participants-box {
+  width: 75%;
+  padding: 20px;
+  overflow-y: auto;
+  background: #0a0a0a; /* match navbar */
+}
+
+.participants-box h2 {
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.participants-box ul {
+  list-style: none;   /* removes the dot */
+  padding-left: 0;    /* align numbers nicely */
+}
+
+.participant {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px dashed #00ff41;
+}
+
+.betting {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.betting input {
+  padding: 5px;
+  background: black;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  width: 100px;
+}
+
+.bet-btn {
+  background: transparent;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  cursor: pointer;
+  padding: 5px 12px;
+}
+
+.bet-btn:hover {
+  background: #00ff41;
+  color: black;
+}
+
+.bets-list {
+  margin-top: 8px;
+}
+
+.bets-list ul {
+  list-style: none;
+  margin-top: 5px;
+}
+
+/* Balance in navbar (removed from UI, kept just in case) */
+.balance-display {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 6px #00ff41;
+  display: flex;
+  align-items: center;
+}
+
+/* Sexy participant row */
+.participant-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.participant-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff41;
+}
+
+/* Add Funds Box */
+.add-funds-box {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  background: #0a0a0a; /* match navbar */
+  border: 2px solid #00ff41;
+  padding: 15px;
+  width: 250px;
+  z-index: 1000;
+}
+
+.add-funds-box h3 {
+  margin-bottom: 10px;
+  color: #00ff41;
+}
+
+.add-funds-box textarea,
+.add-funds-box input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: black;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+}
